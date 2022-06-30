@@ -1,4 +1,10 @@
-
+var pTag=document.querySelector("p")
+document.addEventListener("keypress",function(e){
+    var text = e.key;
+    pTag.innerHTML =text
+    audioPlay(text);
+    animationHandller(text)
+})
 
 for (i=0; i<=3;i++){
     document.querySelectorAll(".btn")[i].addEventListener("click" ,function(){
@@ -11,13 +17,7 @@ for (i=0; i<=3;i++){
    
 
 
-var pTag=document.querySelector("p")
-document.addEventListener("keypress",function(e){
-    var text = e.key;
-    pTag.innerHTML =text
-    audioPlay(text);
-    animationHandller(text)
-})
+
 
 
 function audioPlay(text){
